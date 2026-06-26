@@ -1,0 +1,706 @@
+/* リセットCSS */
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+img{
+  display: block;
+}
+a{
+  text-decoration: none;
+}
+body{
+  font-family: "游明朝体","Yu Mincho",YuMincho,"ヒラギノ明朝 Pro","Hiragino Mincho Pro","MS P明朝","MS PMincho",serif;
+}
+
+/* ヘッダー部分 */
+#headerInner{
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;         /* → margin: 0 auto;と記述可 */
+  display: flex;              /* 横並びにする */
+  justify-content: space-between; /* 左右に配置 */
+  align-items: center;        /* 縦中央揃え */
+}
+/* ロゴ画像のサイズ指定 */
+#logo img {
+  width: 300px;
+  height: auto;
+}
+
+/* ボタンを2つ横に並べる箱 */
+.headerBtns {
+  display: flex;
+  gap: 15px;               /* ボタン同士の隙間 */
+}
+
+/* 2つのボタン共通のデザイン（.！ #ではないので注意！） */
+.requestBtn a, 
+.contactBtn a {
+  display: block;
+  width: 160px;            /* 幅を調整 */
+  background-color: #0c418a;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 0;
+  border-radius: 26px;
+  transition: 0.3s;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ホバー時の演出（マウスを乗せた時） */
+.requestBtn a:hover, 
+.contactBtn a:hover {
+  background-color: #083066; 
+  opacity: 0.9;
+  transform: translateY(-2px); /* 少し浮き上がる */
+}
+
+/* ナビ */
+#gnavi{
+  background-color: #0c418a;
+  padding: 12px 0;
+}
+
+#gnavi ul{
+  max-width: 1000px; /* 大きい画面→1000pxで表示 */
+  width: 100%;       /* 小さい画面→画面に合わせて縮む */
+  margin: 0 auto;
+  display: flex;
+}
+
+#gnavi ul li{
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  border-right: 1px solid rgba(255,255,255,0.2); /* 右区切り線 */
+}
+
+#gnavi ul li:last-child{
+  border-right: none; /* 右区切り線を最後だけ消す */
+}
+
+#gnavi ul li a{
+  display: block;
+  color: #fff;
+  padding: 8px 0;
+}
+
+#gnavi ul li a:hover{
+  background-color: #083066;
+}
+
+/* メイン */
+#mainPhoto {
+  position: relative; /* 文字を画像の上に重ねるための準備 */
+  width: 100%;        /* 横幅いっぱい */
+}
+
+#mainPhoto::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2); /* 黒の透明 */
+}
+
+#mainPhoto img {
+  width: 100%;       /* 画像を横幅いっぱいに広げる */
+  height: auto;      /* 縦横比を維持して、上下を切らない */
+  object-fit: cover;
+}
+
+#mainPhoto h1 {
+  /* 画像の上に文字を重ねるための設定 */
+  position: absolute; 
+  bottom: 30%;        /* 下から⚪︎%の位置に配置 */
+  right: 2%;         /* 右から⚪︎%の位置に配置 */
+  color: #fff;
+  font-size: 5vw;    /* ビューポート幅 画面幅に合わせて文字サイズも変わるようにすると綺麗！ */
+  text-align: right;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7); /* 横 縦 ぼかし 色 */
+  line-height: 1.2;
+  margin: 0;         /* 念のため、余計な余白を消す */
+  z-index: 1;        /* 文字を前に出す */
+}
+
+/* セクション共通：全体を真ん中に寄せて、上下に余白を作る */
+section {
+  max-width: 1000px;  /* サイトのコンテンツ幅 */
+  margin: 80px auto;  /* 上下に80pxの隙間を作り、左右中央寄せ */
+  padding: 0 20px;    /* 画面が狭い時に端にピッタリくっつかないための予備 */
+}
+
+section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #0c418a;
+  margin-bottom: 40px; /* 見出しとその下の中身との隙間 */
+  position: relative;
+}
+
+#news ul {
+  list-style: none; /* 箇条書きの「・」を消す */
+  padding: 0;
+  border-top: 1px solid #ddd; /* 一番上に線を入れる */
+}
+
+#news li {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd; /* ニュースの間に区切り線 */
+}
+
+#news .date {
+  font-weight: bold;
+  margin-right: 20px; /* 日付と文章の間の隙間 */
+  color: #666;
+}
+
+.discoverList {
+  display: flex;
+  justify-content: space-between; /* 3つを均等に並べる */
+  list-style: none;
+  padding: 0;
+}
+
+.discoverList li {
+  width: 31%; /* 3つ並ぶように幅を調整 */
+  text-align: center;
+}
+
+.discoverList h3 {
+  font-size: 18px;
+  margin-bottom: 15px; /* 文字と画像の間の隙間 */
+}
+
+.discoverList img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* 角を少し丸くする */
+}
+
+/* FACULTYセクション固有のデザイン */
+.facultyContainer {
+  display: flex;
+  gap: 60px;          /* 写真と文字の間にしっかり余白を作る（デザイン原則：近接） */
+  align-items: center; /* 縦の中央で揃える */
+}
+
+.facultyText {
+  flex: 1;            /* 幅を半分ずつに分ける */
+}
+
+/* --- FACULTYセクション画像の調整 --- */
+
+.facultyImage {
+  flex: 1;
+  /* 画像がはみ出さないように、かつ角丸を適用するための設定 */
+  overflow: hidden; 
+  border-radius: 8px; /* DISCOVERセクションと同じ丸み */
+}
+
+.facultyImage img {
+  width: 100%;
+  height: 380px;      /* 高さを固定してサイズを抑える（調整） */
+  object-fit: cover;  /* 設定した高さに合わせて、画像を綺麗に切り抜く */
+  border-radius: 8px; /* 画像自体にも角丸を適用 */
+}
+
+.facultyText h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.facultyText p {
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* 学部リストをボタンっぽく並べる */
+.facultyLinkList {
+  display: flex;
+  flex-wrap: wrap;    /* 折り返しを許可 */
+  gap: 10px;
+}
+
+.facultyLinkList li a {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #0c418a;
+  color: #0c418a;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.facultyLinkList li a:hover {
+  background-color: #0c418a;
+  color: #fff;
+}
+
+.facultyText p {
+  line-height: 2.0;         /* 行間を広めに取って、1行1行を大切に読ませる */
+  letter-spacing: 0.05em;   /* 文字の間隔をわずかに広げ、高級感を出す */
+  color: #444;            /* 少しグレーに。目に優しく洗練する */
+  margin-bottom: 30px;
+}
+
+
+/* --- フッター全体のレイアウト --- */
+#footer {
+  background-color: #0c418a;
+  color: #fff;
+  padding: 60px 0 40px;
+  width: 100%;
+}
+
+.footerInner {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* フッター内のリンクをすべて白く強制 */
+#footer a {
+  color: #fff !important;
+}
+
+/* アクセスの見出しデザイン */
+.accessTitle {
+  display: inline-block;    /* アンダーラインの長さを文字に合わせる */
+  font-size: 20px;          /* 文字を大きく */
+  font-weight: bold;        /* 太字に */
+  color: #fff !important;   /* 確実に白く */
+  margin-bottom: 12px;      /* 下の住所との隙間 */
+  padding-bottom: 3px;      /* 文字とアンダーラインの隙間 */
+  border-bottom: 1px solid #fff; /* 白いアンダーライン */
+  letter-spacing: 0.05em;    /* 少し文字の間隔を広げて高級感を出す */
+}
+
+/* 住所テキスト */
+.address {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* --- 上段（Top）：左右に振り分ける --- */
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+/* --- 右側の箱（ボタンとSNS） --- */
+.footerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 25px;
+}
+
+/* フッターの資料請求ボタン：アウトラインデザイン */
+.footerRight .requestBtn a {
+  display: block;
+  width: 200px;
+  background-color: transparent; /* 背景透明 */
+  color: #fff !important;       /* 文字白 */
+  border: 1px solid #fff;       /* 白枠 */
+  padding: 12px 0;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.snsIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.snsIcons img {
+  width: 32px;
+}
+
+/* --- 下段：メニューとコピーライトを中央に --- */
+.footerNav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footerNav li {
+  white-space: nowrap;
+}
+
+.copyright {
+  text-align: center;
+  opacity: 0.6;
+}
+
+/*--------------------------------------------------------------
+  クリックできる要素の共通ルール
+--------------------------------------------------------------*/
+.requestBtn a, 
+.contactBtn a, 
+.snsIcons a, 
+.discoverList li, 
+.footerNav a,
+.address a {
+  transition: all 0.3s ease;
+}
+
+.requestBtn a:hover, 
+.contactBtn a:hover, 
+.snsIcons a:hover, 
+.discoverList li:hover,
+.footerNav a:hover,
+.address a:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+/* --- お問い合わせページ専用スタイル --- */
+
+/* フォーム全体の幅と余白を整える */
+#contactPage {
+  max-width: 700px;  /* フォームが広がりすぎないように制限 */
+  margin: 80px auto; /* 上下に余白を作り、中央に寄せる */
+  padding: 0 20px;
+}
+
+#contactPage h1 {
+  text-align: center;
+}
+
+.contactIntro {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 入力項目ごとのまとまり */
+.formGroup {
+  margin-bottom: 30px;
+}
+
+/* ラベル（お名前、メールアドレスなど） */
+.formGroup label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+/* 「必須」ラベルのデザイン */
+.formGroup label .labelMust {
+  background-color: #c00; /* 大学らしい落ち着いた赤 */
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-left: 10px;
+  vertical-align: middle;
+  font-weight: bold;
+}
+/* --- チェックボックス横の文字（サイズと色の調整） --- */
+.checkGroup label {
+  font-weight: normal; 
+  font-size: 14px;
+  color: #444;         /* 優しいグレー */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+/* 入力ボックスとテキストエリア */
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* 枠線を含めて幅100%にする */
+  font-size: 16px;
+  font-family: inherit;
+  background-color: #fafafa;
+}
+
+/* 入力中（クリックした時）の枠線の色を変える */
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #0c418a;
+  background-color: #fff;
+}
+
+/* 送信ボタン */
+.submitBtn {
+  display: block;
+  width: 280px;
+  margin: 50px auto 0;
+  padding: 16px 0;
+  background-color: #0c418a;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.submitBtn:hover {
+  background-color: #083066;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* チェックボックスとラジオボタンのグループを横並びにする */
+.checkGroup, .radioGroup {
+  display: flex;
+  flex-wrap: wrap; /* 画面が狭い時に折り返す */
+  gap: 25px;       /* 項目同士の隙間 */
+  padding: 10px 0;
+}
+
+/* ラベル内の文字とチェックボックスの距離を整える */
+.checkGroup label, .radioGroup label {
+  font-weight: normal; 
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;       /* 横並びを維持 */
+  align-items: center; /* ★重要：チェックボックスと文字の上下中央を揃える */
+  gap: 8px;            /* ボックスと文字の間の隙間 */
+  white-space: nowrap; /* ★追加：文字が途中で改行されないように強制する */
+}
+
+/* チェックボックスとラジオボタン自体のサイズを少し整える */
+.checkGroup input, .radioGroup input {
+  width: 17px;
+  height: 17px;
+  margin: 0;           /* 中央揃え */
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* セレクトボックスの見た目を整える */
+.formGroup select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fafafa;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/*--------------------------------------------------------------
+  メディアクエリ：画面幅が768px以下の時の設定
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+
+  /* 1. ヘッダー */
+  #logo img {
+    width: 140px;
+  }
+  #headerInner {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .headerBtns {
+    display: none;
+  }
+
+  /* 2. ハンバーガーボタン */
+  #navBtn {
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+    position: relative;
+  }
+  #navBtn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #0c418a;
+    transition: 0.3s;
+  }
+  
+  /* ボタンアニメーション（×印） */
+  #navBtn.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+    background-color: #fff;
+  }
+  #navBtn.open span:nth-child(2) {
+    opacity: 0;
+  }
+  #navBtn.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    background-color: #fff;
+  }
+
+  /* 3. ナビゲーションメニュー */
+  #gnavi {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: rgba(12, 65, 138, 0.98);
+    transition: 0.5s;
+    z-index: 99;
+    padding-top: 80px;
+  }
+  #gnavi.active {
+    right: 0;
+  }
+  #gnavi ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  #gnavi ul li a {
+    display: block;
+    font-size: 18px;
+    padding: 20px 0;
+    color: #fff;
+  }
+  
+  /* メニュー内お問い合わせボタン */
+  #gnavi ul li.spBtn {
+    border-bottom: none;
+    margin-top: 20px;
+    padding: 0 40px;
+  }
+  #gnavi ul li.spBtn a {
+    background-color: #fff;
+    color: #0c418a !important;
+    border-radius: 30px;
+    font-weight: bold;
+  }
+
+  /* 4. メイン写真（高さ50vh） */
+  #mainPhoto img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+  #mainPhoto h1 {
+    font-size: 7.5vw;
+    line-height: 1.4;
+    bottom: 10%;
+    right: 5%;
+  }
+
+  /* 5. セクション共通 */
+  section {
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  section h2 {
+    font-size: 26px;
+    color: #0c418a;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 0.1em;
+  }
+
+  /* 6. Newsセクション */
+  #news li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #news li a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    line-height: 1.6;
+  }
+  #news .date {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #888;
+  }
+
+  /* 7. コンテンツ画像・マップ */
+  .discoverList, 
+  .facultyContainer {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .discoverList li, 
+  .facultyText, 
+  .facultyImage {
+    width: 100% !important;
+  }
+  
+  /* DISCOVER画像、FACULTY画像、マップの高さを揃える */
+  .discoverList img, 
+  .facultyImage img,
+  #access iframe {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  /* 8. フッター */
+  .footerTop {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+  .footerRight {
+    align-items: center;
+  }
+  .footerNav {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  .footerNav li a {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+}

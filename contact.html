@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | 日比谷国際大学</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div id="headerInner">
+      <div id="logo">
+        <a href="index.html">
+          <img src="images/logo.jpg" alt="日比谷国際大学">
+        </a>
+      </div>
+
+      <div id="navBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="headerBtns">
+        <div class="contactBtn"><a href="contact.html">お問い合わせ</a></div>
+      </div>
+    </div> <nav id="gnavi">
+      <ul>
+        <li><a href="#">大学案内</a></li>
+        <li><a href="#">学生生活</a></li>
+        <li><a href="#">入試情報</a></li>
+        <li><a href="#">海外留学</a></li>
+        <li><a href="#">社会連携</a></li>
+        <li><a href="#">キャリア</a></li>
+        </ul>
+    </nav>
+  </header>
+  
+
+  <main>
+    <section id="contactPage">
+      <h1>お問い合わせ</h1>
+      <p class="contactIntro">以下のフォームに必要事項を入力し、送信してください。</p>
+
+      <form action="#" method="post" class="contactForm">
+        <div class="formGroup">
+          <label for="name">お名前<span class="labelMust">必須</span></label>
+          <input type="text" id="name" name="name" placeholder="日比谷 太郎" required>
+        </div>
+
+        <div class="formGroup">
+          <label for="email">メールアドレス<span class="labelMust">必須</span></label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </div>
+
+
+        <div class="formGroup">
+          <label for="category">お問い合わせ項目</label>
+          <select id="category" name="category">
+            <option value="">選択してください</option>
+            <option value="admission">入試について</option>
+            <option value="campus">キャンパス見学について</option>
+            <option value="study-abroad">海外留学プログラムについて</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+
+        <div class="formGroup">
+          <label>希望する資料（複数選択可）</label>
+          <div class="checkGroup">
+            <label><input type="checkbox" name="document" value="guide"><span>大学案内</span></label>
+            <label><input type="checkbox" name="document" value="admission"><span>入試ガイド</span></label>
+            <label><input type="checkbox" name="document" value="faculty"><span>学部紹介パンフレット</span></label>
+          </div>
+        </div>
+
+        <div class="formGroup">
+          <label for="message">お問い合わせ内容<span class="labelMust">必須</span></label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="submitBtn">送信する</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footerInner">
+      <div class="footerTop">
+        <div class="access">
+          <p class="address">
+            <a href="#"><span class="accessTitle">アクセス</span></a><br>
+            〒100-0012<br>東京都千代田区日比谷
+          </p>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.1325526207056!2d139.75370546142406!3d35.67373802247534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bf214b15bd5%3A0x73dfdb11fdb9ff2d!2z44CSMTAwLTAwMTIg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65pel5q-U6LC35YWs5ZyS77yR!5e0!3m2!1sja!2sjp!4v1777190410953!5m2!1sja!2sjp"
+              width="350" height="200" style="border:0;"></iframe>
+          </div>
+        </div>
+        <div class="footerRight">
+          <div class="requestBtn"><a href="#">資料請求</a></div>
+          <div class="snsIcons">
+            <a href="#"><img src="images/x.png" alt="X"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+          </div>
+        </div>
+      </div>
+      <ul class="footerNav">
+        <li><a href="#">サイトマップ</a></li>
+        <li><a href="#">プライバシーポリシー</a></li>
+        <li><a href="#">サイトポリシー</a></li>
+      </ul>
+      <small class="copyright">© Hibiya International University. All Rights Reserved.</small>
+    </div>
+  </footer>
+
+</body>
+
+</html>

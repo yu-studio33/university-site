@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日比谷国際大学</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div id="headerInner">
+      <div id="logo">
+        <a href="index.html">
+          <img src="images/logo.jpg" alt="日比谷国際大学">
+        </a>
+      </div>
+
+      <div id="navBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="headerBtns">
+        <div class="contactBtn"><a href="contact.html">お問い合わせ</a></div>
+      </div>
+    </div> <nav id="gnavi">
+      <ul>
+        <li><a href="#">大学案内</a></li>
+        <li><a href="#">学生生活</a></li>
+        <li><a href="#">入試情報</a></li>
+        <li><a href="#">海外留学</a></li>
+        <li><a href="#">社会連携</a></li>
+        <li><a href="#">キャリア</a></li>
+        
+        <li class="spBtn"><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="mainPhoto">
+      <img src="images/main.jpg" alt="キャンパスの風景">
+      <h1>世界を思考する<br>未来を紡ぐ</h1>
+    </div>
+
+    <section id="news">
+      <h2>News</h2>
+      <ul>
+        <li><span class="date">2XXX.04.01</span> 春のオープンキャンパスを開催します</li>
+        <li><span class="date">2XXX.03.15</span> 新しい国際交流プログラムが始まります</li>
+        <li><span class="date">2XXX.03.01</span> 本学大学院生がアフリカ教育学会において最優秀発表賞を受賞</li>
+      </ul>
+    </section>
+
+    <section id="discover">
+      <h2>DISCOVER HIU</h2>
+
+      <ul class="discoverList">
+        <li>
+          <h3>キャンパス案内</h3> <img src="images/campusannai.jpg" alt="キャンパス案内">
+        </li>
+        <li>
+          <h3>オープンキャンパス</h3> <img src="images/opencampus.jpg" alt="オープンキャンパス">
+        </li>
+        <li>
+          <h3>国際交流</h3> <img src="images/kokusaikouryu.jpg" alt="国際交流">
+        </li>
+      </ul>
+    </section>
+
+    <section id="faculty">
+      <h2>FACULTY</h2>
+      <div class="facultyContainer">
+        <div class="facultyText">
+          <h3>知識を、未来を動かす知性へ</h3>
+          <p>対話と探究を通じて、一人ひとりが理想の未来を紡ぐための力を養います。</p>
+          <ul class="facultyLinkList">
+            <li><a href="#">文学部</a></li>
+            <li><a href="#">法学部</a></li>
+            <li><a href="#">理学部</a></li>
+            <li><a href="#">経済学部</a></li>
+            <li><a href="#">国際社会科学部</a></li>
+            <li><a href="#">国際文化交流学部</a></li>
+          </ul>
+        </div>
+        <div class="facultyImage">
+          <img src="images/faculty.jpg" alt="キャンパス風景">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <div class="footerInner">
+      <div class="footerTop">
+        <div class="access">
+          <p class="address">
+            <a href="#"><span class="accessTitle">アクセス</span></a>
+            <br>
+            〒100-0012<br>
+            東京都千代田区日比谷
+          </p>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.1325526207056!2d139.75370546142406!3d35.67373802247534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bf214b15bd5%3A0x73dfdb11fdb9ff2d!2z44CSMTAwLTAwMTIg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65pel5q-U6LC35YWs5ZyS77yR!5e0!3m2!1sja!2sjp!4v1777190410953!5m2!1sja!2sjp"
+              width="350" height="200" style="border:0;"></iframe>
+          </div>
+        </div>
+
+        <div class="footerRight">
+          <div class="requestBtn"><a href="#">資料請求</a></div>
+          <div class="snsIcons">
+            <a href="#"><img src="images/x.png" alt="X"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+          </div>
+        </div>
+      </div>
+
+      <ul class="footerNav">
+        <li><a href="#">サイトマップ</a></li>
+        <li><a href="#">プライバシーポリシー</a></li>
+        <li><a href="#">サイトポリシー</a></li>
+      </ul>
+
+      <small class="copyright">
+        © Hibiya International University. All Rights Reserved.
+      </small>
+
+    </div>
+  </footer>
+<script>
+    const navBtn = document.getElementById('navBtn');
+    const gnavi = document.getElementById('gnavi');
+
+    navBtn.addEventListener('click', () => {
+      // ボタンをクリックするたびに「open」と「active」というクラスをつけたり外したりする
+      navBtn.classList.toggle('open');
+      gnavi.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
