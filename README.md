@@ -2,6 +2,9 @@
 
 架空の大学サイトをHTML・CSSでオリジナル制作しました。
 
+## スクリーンショット
+![Hibiya International University Top Page](images/daigaku.png)
+
 ## 使用技術
 - HTML
 - CSS（レスポンシブ対応）
