@@ -4,6 +4,7 @@
 
 ## スクリーンショット
 ![Hibiya International University Top Page](images/daigaku.png)
+![Hibiya International University News & Discover HIU](images/daigaku2.png)
 
 ## 使用技術
 - HTML
